@@ -15,8 +15,11 @@
  */
 
 defined('SYSPATH') OR die('No direct access allowed.');
-
+echo '<div class="stepper">';
+echo '<ul class="stepper_'.sizeof($steps).'steps">';
 foreach ($steps as $step)
 {
-  echo "step";
+  echo $step->render();
 }
+echo '</ul>';
+echo '</div>';
